@@ -1,0 +1,377 @@
+* , *::before , *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outer_container {
+    overflow: hidden;
+    background-color: rgba(159,206,198,.1);
+}
+
+.inner_container {
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bx-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.loop_wrap {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.second_loop {
+    justify-content: space-around;
+}
+
+.loop_img_wrap {
+    position: relative;
+}
+  
+.loop_wrap img {
+    width: auto;
+    height: 100%;
+    padding: 10%;
+}
+
+@keyframes loop {
+    0% {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+  
+@keyframes loop2 {
+    0% {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+}
+
+.loop_wrap img:first-child {
+    animation: loop 50s -25s linear infinite;
+}
+  
+.loop_wrap img:last-child {
+    animation: loop2 50s linear infinite;
+}
+
+.text_area {
+    margin: 5%;
+}
+
+h2.animation {
+    font-size: 42px;
+    background-color: rgba(159,206,198,.92);
+    padding: 10px 20px;
+    width: 350px;
+    color: #fff;
+    height: 80px;
+}
+
+.text_area p , .about_wrap p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0,0,0,.8);
+    width: 560px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#mv {
+    position: relative;
+}
+
+@keyframes slide {
+    0% {
+        transform: rotate(45deg) translateY(-20vw) translate3d(0,0,0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(45deg) translateY(20vw) translate3d(0,0,0);
+        opacity: 0;
+    }
+}
+
+#mv .mv_border {
+    display: block;
+    width: 200%;
+    height: 1px;
+    background: #227fbc;
+    position: absolute;
+    left: -10vw;
+    transform: rotate(45deg);
+    transform-origin: center;
+    animation: slide 10s ease-in-out infinite alternate;
+    opacity: 0.5;
+    outline: 1px solid transparent;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#mv .mv_border:nth-of-type(2) {
+    background: #10a5c1;
+    top: -5%;
+    animation-direction: alternate-reverse;
+    animation-duration: 6s;
+}
+
+#mv .mv_border:nth-of-type(3) {
+    background: #8a98f5;
+    opacity: 0.2;
+    top: -6%;
+    animation-duration: 14s;
+}
+
+#mv .mv_border:nth-of-type(4) {
+    top: 10%;
+    animation-duration: 16s;
+}
+
+#mv .mv_border:nth-of-type(5) {
+    background: #10a5c1;
+    top: -4%;
+    animation-duration: 8s;
+}
+
+#mv .mv_border:nth-of-type(6) {
+    background: #8a98f5;
+    opacity: 0.2;
+    top: -3%;
+    animation-direction: alternate-reverse;
+    animation-duration: 12s;
+}
+
+.video_wrap {
+    position: relative;
+}
+
+video {
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+.video_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 1200px;
+}
+
+.video_text h3 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.video_text p {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.about_wrap {
+    text-align: center;
+    position: relative;
+}
+
+#about {
+    width: 100%;
+    height: 1500px;
+    background-image: url(img/SKH_2022_06_20-03.jpg);
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 10% 0;
+    background-size: cover;
+    background-color: rgba(255,255,255,.8);
+    background-blend-mode: color-burn;
+    background-attachment: fixed;
+    margin-top: -10px;
+}
+
+.about_wrap {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.about_wrap img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.about_wrap p:nth-of-type(2) {
+    bottom: -15%;
+}
+
+#about h2 , #about > p {
+    color: #333;
+    margin-left: 10%;
+}
+
+.about_wrap p {
+    background-color: rgba(159,206,198,.92);
+    color: #fff;
+    position: absolute;
+    bottom: -5%;
+    left: 10%;
+}
+
+p.about_text {
+    color: #fff;
+    margin-left: 10px;
+}
+
+#about h2 {
+    font-size: 60px;
+}
+
+#about p {
+    font-size: 24px;
+}
+
+p.about_btn {
+    background-color: #333;
+    display: block;
+    width: 300px;
+    padding: 10px 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+}
+
+p.about_btn a {
+    color: #fff;
+}
+
+.animation {
+    width: 0;
+    opacity: 0;
+}
+
+@keyframes slide {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 80%;
+        opacity: 1;
+    }
+}
+
+.animation.active {
+    animation: slide .5s forwards; 
+}
+
+@media (max-width:768px) {
+
+    #mv .mv_border {
+        width: 500%;
+        left: -100vw;
+    }
+
+    p , #about p , p.about_des {
+        font-size: 14px;
+    }
+
+    .text_area {
+        margin: 0;
+    }
+
+    .text_area h2 {
+        width: 80%;
+        font-size: 30px;
+        margin-left: 10%;
+        height: 60px;
+    }
+
+    .text_area p {
+        width: 80%;
+        font-size: 12px;
+        margin-left: 10%;
+    }
+
+    #about {
+        height: 750px;
+        background-attachment: unset;
+        padding: 100px 0;
+    }
+
+    #about h2, .about_des {
+        margin-left: 5%;
+    }
+
+    #about h2 {
+        font-size: 34px;
+    }
+
+    #about > p {
+        width: 80%;
+    }
+
+    .about_wrap p {
+        width: 80%;
+        font-size: 14px;
+        bottom: -10%;
+        left: 3%;
+    }
+
+    .about_wrap p:nth-of-type(2) {
+        bottom: -30%;
+    }
+
+    .video_text {
+        width: 100%;
+    }
+
+    .video_text h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .video_text p {
+        font-size: 10px;
+        line-height: 14px;
+        max-width: 80%;
+        margin: 0 auto;
+        bottom: 10%;
+    }
+
+    p.about_btn {
+        width: 80%;
+        bottom: 5%;
+        right: auto;
+    }
+
+
+}
+
+@media (min-width:769px) {
+    @keyframes slide {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        100% {
+            width: 600px;
+            opacity: 1;
+        }
+    }
+}
