@@ -283,8 +283,8 @@ p.about_btn a {
 @media (max-width:768px) {
 
     #mv .mv_border {
-        width: 500%;
-        left: -100vw;
+        width: 100%;
+        left: -15vw;
     }
 
     p , #about p , p.about_des {
