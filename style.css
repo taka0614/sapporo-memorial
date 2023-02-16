@@ -156,6 +156,55 @@ h2.animation {
     animation-duration: 12s;
 }
 
+#mv2 .mv_border {
+    display: block;
+    width: 200%;
+    height: 1px;
+    background: #ffb6c1;
+    position: absolute;
+    right: 0vw;
+    transform: rotate(45deg);
+    transform-origin: center;
+    animation: slide 10s ease-in-out infinite alternate;
+    opacity: 0.5;
+    outline: 1px solid transparent;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#mv2 .mv_border:nth-of-type(2) {
+    background: #ffdead;
+    top: -5%;
+    animation-direction: alternate-reverse;
+    animation-duration: 6s;
+}
+
+#mv2 .mv_border:nth-of-type(3) {
+    background: #fffaf0;
+    opacity: 0.2;
+    top: -6%;
+    animation-duration: 14s;
+}
+
+#mv2 .mv_border:nth-of-type(4) {
+    top: 10%;
+    animation-duration: 16s;
+}
+
+#mv2 .mv_border:nth-of-type(5) {
+    background: #fff0f5;
+    top: -4%;
+    animation-duration: 8s;
+}
+
+#mv2 .mv_border:nth-of-type(6) {
+    background: #ffe4e1;
+    opacity: 0.2;
+    top: -3%;
+    animation-direction: alternate-reverse;
+    animation-duration: 12s;
+}
+
 .video_wrap {
     position: relative;
 }
@@ -281,6 +330,10 @@ p.about_btn a {
 }
 
 @media (max-width:768px) {
+
+    .loop_wrap img {
+        padding: 5%;
+    }
 
     #mv .mv_border {
         width: 100%;
