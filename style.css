@@ -311,7 +311,7 @@ p.about_btn a {
     opacity: 0;
 }
 
-@keyframes slide {
+@keyframes slider {
     0% {
         width: 0;
         opacity: 0;
@@ -322,8 +322,19 @@ p.about_btn a {
     }
 }
 
+@keyframes pc_slider {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 500px;
+        opacity: 1;
+    }
+}
+
 .animation.active {
-    animation: slide .5s forwards; 
+    animation: pc_slider .3s forwards; 
 }
 
 @media (max-width:768px) {
@@ -333,6 +344,9 @@ p.about_btn a {
         margin: 0 30px;
     }
 
+    .animation.active {
+        animation: slider .3s forwards; 
+    }
     
     #mv .mv_border {
         width: 100%;
@@ -344,7 +358,7 @@ p.about_btn a {
     }
 
     .text_area {
-        margin: 0;
+        margin: 10% 0;
     }
 
     .text_area h2 {
