@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
     <title>Document</title>
+
 </head>
 <body>
     <div class="outer_container">
@@ -58,9 +65,9 @@
                 <div class="mv_border"></div>
             </div>
             <div class="text_area">
-                <h2 class="animation">I want to be!</h2>
-                <p class="animation">あなたには「なりたい自分」がありますか？</p>
-                <p class="animation">もし、あるなら当院で一緒に叶えましょう</p>
+                <h2 class="animation slide_text">I want to be!</h2>
+                <p class="animation slide_text">あなたには「なりたい自分」がありますか？</p>
+                <p class="animation slide_text">もし、あるなら当院で一緒に叶えましょう</p>
             </div>
 
             <div class="d-demo">
@@ -115,10 +122,102 @@
         <p class="about_des">お客様と従業員の自己実現を支援するヘルスケアカンパニー。<br>医療・介護・障がい福祉の３つの事業を融合し、地域イノベーションを起こす。</p>
         <div class="about_wrap">
             <img src="img/SKH_2022_06_20-04.jpg">
-            <p class="about_text animation">お客様と従業員の幸福を最大化する、</p>
-            <p class="about_text animation">当院のグループビジョン</p>
+            <p class="about_text animation slide_text">お客様と従業員の幸福を最大化する、</p>
+            <p class="about_text animation slide_text">当院のグループビジョン</p>
         </div>
         <p class="about_btn"><a>READ MORE</a></p>
     </div>
+
+    <div class="people_and_works animation">
+        <h2>PEOPLE AND WORKS</h2>
+        
+        <!-- TESTIMONIALS -->
+<section class="testimonials">
+    <div class="container">
+  
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="customers-testimonials" class="owl-carousel">
+  
+              <!--TESTIMONIAL 1 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img class="img-circle" src="img/24281315_l-768x512.jpg" alt="">
+                  <p>ご利用者様と１対１で向き合う訪問看護の仕事で、思い描いていた看護師像に近づけています。</p>
+                </div>
+                <div class="testimonial-name">看護師</div>
+              </div>
+              <!--END OF TESTIMONIAL 1 -->
+              <!--TESTIMONIAL 2 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img class="img-circle" src="img/3986973_l-2048x1365.jpg" alt="">
+                  <p>たくさんのご利用者様に機能訓練をすることで、「笑って楽しく」暮らしてもらえるよう頑張っています。</p>
+                </div>
+                <div class="testimonial-name">病棟介護職員</div>
+              </div>
+              <!--END OF TESTIMONIAL 2 -->
+              <!--TESTIMONIAL 3 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img class="img-circle" src="img/3986977_l-2048x1365.jpg" alt="">
+                  <p>患者様個々の疾病、年齢、摂食機能等を考慮してバランスのとれた食事を提供しております。</p>
+                </div>
+                <div class="testimonial-name">厨房職員</div>
+              </div>
+              <!--END OF TESTIMONIAL 3 -->
+              <!--TESTIMONIAL 4 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img class="img-circle" src="img/3987229_m.jpg" alt="">
+                  <p>安心して受診いただける医療環境の提供を目指しています。希望の医師がいる場合はご相談ください。</p>
+                </div>
+                <div class="testimonial-name">医療事務</div>
+              </div>
+              <!--END OF TESTIMONIAL 4 -->
+              <!--TESTIMONIAL 5 -->
+            <!--  <div class="item">
+                <div class="shadow-effect">
+                  <img class="img-circle" src="" alt="">
+                  <p></p>
+                </div>
+                <div class="testimonial-name"></div>
+              </div>  -->
+              <!--END OF TESTIMONIAL 5 -->
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- END OF TESTIMONIALS -->
+    </div>
+
+    <script>
+        jQuery(document).ready(function($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $('#customers-testimonials').owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots:true,
+                autoplayTimeout: 8500,
+                smartSpeed: 450,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  768: {
+                    items: 2
+                  },
+                  1170: {
+                    items: 3
+                  }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
