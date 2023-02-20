@@ -608,8 +608,15 @@ p.about_btn a {
     }
 
     .recruit_wrap {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .recruit_wrap a {
+        width: calc(100%/2);
+    }
+
+    .recruit_wrap img {
+        width: 100%;
     }
 
 }
