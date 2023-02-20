@@ -265,7 +265,7 @@ video {
     bottom: -15%;
 }
 
-#about h2 , #about > p , .people_and_works h2 {
+#about h2 , #about > p , .people_and_works h2 , #recruit h2 {
     color: #333;
     margin-left: 10%;
 }
@@ -283,7 +283,7 @@ p.about_text {
     margin-left: 10px;
 }
 
-#about h2 , .people_and_works h2 {
+#about h2 , .people_and_works h2 , #recruit h2 {
     font-size: 60px;
 }
 
@@ -422,15 +422,19 @@ p.about_btn a {
     background: #0a467d;
   }
 
-  .people_and_works h2 {
+  .people_and_works h2 , #recruit h2 {
     padding-top: 5%;
     margin-top: 0;
   }
 
-  .people_and_works {
+  .people_and_works , #recruit {
     background-color: rgba(159,206,198,.1);
     position: relative;
+  }
+
+  #recruit {
     overflow: hidden;
+    background-color: rgba(255,255,204,.3);
   }
 
   .people_and_works::before {
@@ -447,24 +451,65 @@ p.about_btn a {
     opacity: 0;
   }
 
-  @keyframes flow_down {
+  #recruit::before {
+    content: "";
+    width: 100%;
+    height: 1000px;
+    display: block;
+    background-color: rgba(255,228,225, .5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    z-index: -1;
+    opacity: 0;
+  }
+
+  @keyframes left_slide {
     0% {
         opacity: 0;
-        height: 0px;
+        height: 1000px;
         width: 100%;
         clip-path: polygon(0 0, 0% 100%, 85% 0);
+        transform: translateX(-100%);
     }
     100% {
         opacity: 1;
         height: 1000px;
         width: 100%;
         clip-path: polygon(0 0, 0% 100%, 85% 0);
+        transform: translateX(0);
     }
   }
 
   .people_and_works.active::before {
-    animation: flow_down 2s forwards;
+    animation: left_slide 2s forwards;
   }
+
+  .recruit_wrap {
+    display: flex;
+    justify-content: center;
+    margin: 10% 0;
+}
+
+@keyframes right_slide {
+    0% {
+        opacity: 0;
+        height: 1000px;
+        width: 100%;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        height: 1000px;
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+#recruit.active::before {
+    animation: right_slide 2s forwards;
+}
 
   
 
@@ -516,7 +561,7 @@ p.about_btn a {
         margin-left: 5%;
     }
 
-    #about h2 , .people_and_works h2  {
+    #about h2 , .people_and_works h2 , #recruit h2  {
         font-size: 34px;
     }
 
@@ -558,8 +603,13 @@ p.about_btn a {
         right: auto;
     }
 
-    .people_and_works h2 {
+    .people_and_works h2 , #recruit h2 {
         padding-top: 10%;
+    }
+
+    .recruit_wrap {
+        flex-direction: column;
+        align-items: center;
     }
 
 }
